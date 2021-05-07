@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorApp.MainPage"
+             Padding="10"
+             NavigationPage.HasBackButton="False">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="History" Clicked="OnAdd"/>
+    </ContentPage.ToolbarItems>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="resulttext" Grid.Row="0" Grid.ColumnSpan="4" Text="" VerticalOptions="End" HorizontalOptions="End" FontSize="50" />
+
+        <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        <Button Text="00" Grid.Row="5" Grid.Column="1" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+
+        <Button Text="C" Grid.Row="1" Grid.Column="3" Clicked="OnClear" BackgroundColor="Red" TextColor="Black" FontSize="36"/>
+        
+        <Button Text="+" Grid.Row="2" Grid.Column="3" Clicked="OnSelectOperator" BackgroundColor="#FF8C00" TextColor="Black" FontSize="36"/>
+
+        <Button Text="-" Grid.Row="3" Grid.Column="3" Clicked="OnSelectOperator" BackgroundColor="#FF8C00" TextColor="Black" FontSize="36"/>
+
+        <Button Text="÷" Grid.Row="4" Grid.Column="2" Clicked="OnSelectOperator" BackgroundColor="#FF8C00" TextColor="Black" FontSize="36"/>
+
+        <Button Text="×" Grid.Row="4" Grid.Column="3" Clicked="OnSelectOperator" BackgroundColor="#FF8C00" TextColor="Black" FontSize="36"/>
+
+        <Button Text="." Grid.Row="4" Grid.Column="0" Clicked="OnSelectNumber" BackgroundColor="White" TextColor="Black" FontSize="36"/>
+
+        
+
+        <Button Text="=" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnCalculate" BackgroundColor="Black" TextColor="White" FontSize="36"/>
+
+    </Grid>
+
+</ContentPage>
